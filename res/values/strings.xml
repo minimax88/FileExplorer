@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FileExplorer</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="open">Open</string>
+    <string name="rename">Rename</string>
+    <string name="details">Details</string>
+    <string name="cut">Cut</string>
+    <string name="copy">Copy</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="path">Path</string>
+	<string name="size">Size</string>
+	<string name="last_modified">Last  Modified</string>
+	<string name="owner">Owner</string>
+	<string name="group">Group</string>
+	<string name="permissions">Permissions</string>
+	<string name="mime">Mime</string>
+</resources>

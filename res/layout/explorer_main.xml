@@ -1,0 +1,93 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity" >
+
+    <ImageView
+        android:id="@+id/img_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <!-- 要写完整的类名,否则 会抛Binary XML file line # Error inflating class -->
+
+        <com.minimax.fileexplorer.FilePathListView
+            android:id="@+id/path_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true" 
+            android:background="@color/transparent_bg">
+        </com.minimax.fileexplorer.FilePathListView>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent_bg"
+            android:layout_above="@+id/button_group"
+            android:layout_below="@id/path_list"
+            android:gravity="center" >
+
+            <GridView
+                android:id="@+id/gv_file_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:numColumns="4"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="10dp" 
+                android:background="#00000000"
+                android:listSelector="@drawable/gv_selector"
+                android:focusable="false">
+            </GridView>
+
+            <ProgressBar
+                android:id="@+id/pb_loading"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/button_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent_bg"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_green"
+                android:src="@drawable/view_icon" />
+
+            <ImageButton
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_green"
+                android:src="@drawable/file_op_icon" />
+
+            <ImageButton
+                android:id="@+id/btn_tools"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_green"
+                android:src="@drawable/tools_icon" >
+            </ImageButton>
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

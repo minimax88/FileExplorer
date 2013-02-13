@@ -1,0 +1,47 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="translucent_bg">
+        <item name="android:windowBackground">@color/transparent_bg</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="wallpaper" parent="android:style/Theme.Wallpaper">
+        <item name="android:colorForeground">#88888888</item>
+    </style>
+
+    <style name="popup_menu">
+        <item name="android:windowBackground">@color/transparent_bg</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="popup_animation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/popup_menu_enter</item>
+        <item name="android:windowExitAnimation">@anim/popup_menu_exit</item>
+    </style>
+
+    <style name="file_dialog" parent="@android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/button_green</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+</resources>
